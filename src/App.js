@@ -1,7 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+
 import './App.css';
+
 import YTSearch from 'youtube-api-search';
-import { debounce } from 'lodash';
+import debounce from 'lodash.debounce';
 
 import Header from './components/Header';
 import SearchBar from './components/Search_bar';
@@ -18,9 +20,18 @@ class App extends Component {
   };
 
   componentDidMount() {
-    YTSearch({ key: KEY.API_key, term: 'CSS Grid' }, videos => {
-      this.setState({ videos, selectedVideo: videos[0] });
-    });
+    YTSearch(
+      {
+        key: KEY.API_key,
+        term: 'CSS Grid'
+      },
+      videos => {
+        this.setState({
+          videos,
+          selectedVideo: videos[0]
+        });
+      }
+    );
   }
 
   componentDidUpdate() {
@@ -29,9 +40,16 @@ class App extends Component {
 
   searchVideo = word => {
     YTSearch(
-      { key: KEY.API_key, term: word },
+      {
+        key: KEY.API_key,
+        term: word
+      },
       debounce(
-        videos => this.setState({ videos, selectedVideo: videos[0] }),
+        videos =>
+          this.setState({
+            videos,
+            selectedVideo: videos[0]
+          }),
         800
       )
     );
@@ -39,12 +57,14 @@ class App extends Component {
 
   makeSelectedVideo = id => {
     const selectedVideo = id;
-    this.setState({ selectedVideo });
+    this.setState({
+      selectedVideo
+    });
   };
 
   render() {
     return (
-      <Fragment>
+      <>
         <Header title={'UTB'} mantra={'Video... Devolved'} />
         <SearchBar searchVideo={this.searchVideo} />
         <VideoDetail video={this.state.selectedVideo} />
@@ -54,7 +74,7 @@ class App extends Component {
           selectedVideo={this.state.selectedVideo}
         />
         <Footer />
-      </Fragment>
+      </>
     );
   }
 }

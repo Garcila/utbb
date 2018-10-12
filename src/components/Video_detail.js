@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-const VideoDetail = ({video, ...props}) => {
+const VideoDetail = ({ video }) => {
   const url = 'https://www.youtube.com/embed/';
   return (
-    <Fragment>
+    <>
       {video ? (
-        <div className="video-detail">
-          <div className="iframe-container intrinsic-container intrinsic-container-16x9">
+        <section className='video-detail'>
+          <div className='iframe-container intrinsic-container intrinsic-container-16x9'>
             <iframe
-              className="video-player"
+              className='video-player'
               title={`${url}${video.id.videoId}`}
               src={`${url}${video.id.videoId}`}
               allowFullScreen
@@ -16,11 +16,11 @@ const VideoDetail = ({video, ...props}) => {
           </div>
           <h3>{video.snippet.title}</h3>
           <p>{video.snippet.description}</p>
-        </div>
+        </section>
       ) : (
-        <div className="loading">Loading...</div>
+        <div className='loading'>Loading Video...</div>
       )}
-    </Fragment>
+    </>
   );
 };
 

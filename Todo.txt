@@ -1,10 +1,11 @@
 Javascript
-[] 0. Hide API key
-[] 1. What can be refactored.  Try and use high order functions
+[X??] 0. Hide API key CHECK IF COMPLETED
+[X] 1. What can be refactored.  Try and use high order functions
 [] 2. Go over code see what can be commented
 [] 3. Can I use more modern React (Fragments, Context)
-[] 4. Is the HTML semantic
+[X] 4. Is the HTML semantic
 [] 5. Syntax FM accessibility
+[X] 6. Just single quotes
 
 CSS
 [] 1. BEM
@@ -13,9 +14,14 @@ CSS
 BIG CHANGES
 [] 1. Adapt for larger screens
 [] 2. Adapt for gigantic screens
+[] 3. Improve footer.  robotLogo??
+[] 4. Loupe in search has to be better
 
 DEPLOYMENT
 [] 1. POST TO GIT... PULL REQUEST?
 [] 2. Update Netlify
 [] 3. Make sure it loads from garcila@github.io
+
+FIND OUT
+[] 1. What is manifest.json doing?
 

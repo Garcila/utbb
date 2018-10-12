@@ -4,17 +4,21 @@ import VideoListItem from './Video_list_item';
 
 const VideoList = ({ videos, makeSelectedVideo, selectedVideo }) => {
   const otherVideos = videos.filter(
-    vd => vd.id.videoId !== selectedVideo.id.videoId
+    video => video.id.videoId !== selectedVideo.id.videoId
   );
-  const list = otherVideos.map(v => (
+  const list = otherVideos.map(otherVideo =>
     <VideoListItem
       makeSelectedVideo={makeSelectedVideo}
-      key={v.id.videoId}
+      key={otherVideo.id.videoId}
       selectedVideo={selectedVideo}
-      video={v}
+      video={otherVideo}
     />
-  ));
-  return <ul className="video-list">{list}</ul>;
+  );
+  return (
+    <ul className='video-list'>
+      {list}
+    </ul>
+  );
 };
 
 export default VideoList;
