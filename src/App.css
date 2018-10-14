@@ -152,13 +152,13 @@ Header:
     background-color: var(--blue);
 }
 
-.title {
+.header__title {
     font-weight: bolder;
     display: flex;
     align-items: baseline;
 }
 
-.title > img {
+.header__title > img {
     padding: 0.2em;
     background-color: var(--background-light);
     margin: 0.5em 0.5em 0 0.5em;
@@ -371,13 +371,13 @@ CSS Grid layout for wider screens, when browser supports grid:
             border-bottom: 1px solid var(--blue);
         }
 
-        .title {
+        .header__title {
             font-size: 2.5em;
             text-align: left;
             padding: 0 0.5em;
         }
 
-        .title > img {
+        .header__title > img {
             background-color: var(--yellow);
         }
 
@@ -459,7 +459,7 @@ CSS Grid layout for wider screens, when browser supports grid:
             margin-bottom: 1em;
         }
 
-        .title > img {
+        .header__title > img {
             background-color: var(--red);
         }
         .mantra {
@@ -501,7 +501,7 @@ CSS Grid layout for wider screens, when browser supports grid:
             background-color: var(--blue);
             padding-bottom: 1em;
         }
-        .title > img {
+        .header__title > img {
             background-color: var(--background-light);
         }
         .mantra {

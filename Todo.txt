@@ -1,10 +1,10 @@
 Javascript
 [X??] 0. Hide API key CHECK IF COMPLETED
 [X] 1. What can be refactored.  Try and use high order functions
-[] 2. Go over code see what can be commented
-[] 3. Can I use more modern React (Fragments, Context)
+[X] 2. Go over code see what can be commented
+[X] 3. Can I use more modern React (Fragments, Context)
 [X] 4. Is the HTML semantic
-[] 5. Syntax FM accessibility
+[X] 5. Syntax FM accessibility....MORE CAN BE DONE IF TIME ALLOWS
 [X] 6. Just single quotes
 
 CSS

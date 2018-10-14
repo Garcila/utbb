@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Footer = () => {
-  return <footer className='footer'>The end starts and ends here</footer>;
-};
+const Footer = () => (
+  <footer className="footer">The end starts and ends here</footer>
+);
 
 export default Footer;

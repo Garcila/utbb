@@ -10,14 +10,21 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <section className='search'>
-        <img className='loupe' src='../images/search.png' alt='search' />
+      <section className="search">
+        <label htmlFor="search">
+            <img
+              className="loupe"
+              src="../images/search.png"
+              alt="search icon"
+            />
+        </label>
         <input
-          type='text'
+          id="search"
+          type="text"
           value={this.state.word}
           onChange={e => this.handleInput(e.target.value)}
-          className='input_search'
-          placeholder='What do you wanna see'
+          className="input_search"
+          placeholder="What do you wanna see"
         />
       </section>
     );

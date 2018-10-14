@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import YTSearch from 'youtube-api-search';
-import debounce from 'lodash.debounce';
+import debounce from 'lodash.debounce'; //this only import debounce, not all lodash library
 
 import Header from './components/Header';
 import SearchBar from './components/Search_bar';
@@ -20,6 +20,8 @@ class App extends Component {
   };
 
   componentDidMount() {
+    // YTSearch only requires a key, a term to search and a callback function.
+    // It might also take a promise instead of the callback
     YTSearch(
       {
         key: KEY.API_key,

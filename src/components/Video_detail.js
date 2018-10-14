@@ -1,24 +1,25 @@
 import React from 'react';
 
 const VideoDetail = ({ video }) => {
-  const url = 'https://www.youtube.com/embed/';
+  const URL = 'https://www.youtube.com/embed/';
   return (
     <>
       {video ? (
-        <section className='video-detail'>
-          <div className='iframe-container intrinsic-container intrinsic-container-16x9'>
+        <main className="video-detail">
+          <div className="iframe-container intrinsic-container intrinsic-container-16x9" tabIndex="0">
             <iframe
-              className='video-player'
-              title={`${url}${video.id.videoId}`}
-              src={`${url}${video.id.videoId}`}
+              className="video-player"
+              title={`${URL}${video.id.videoId}`}
+              src={`${URL}${video.id.videoId}`}
               allowFullScreen
+              alt="video"
             />
           </div>
           <h3>{video.snippet.title}</h3>
           <p>{video.snippet.description}</p>
-        </section>
+        </main>
       ) : (
-        <div className='loading'>Loading Video...</div>
+        <div className="loading">Loading Video...</div>
       )}
     </>
   );
