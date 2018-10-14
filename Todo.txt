@@ -6,17 +6,18 @@ Javascript
 [X] 4. Is the HTML semantic
 [X] 5. Syntax FM accessibility....MORE CAN BE DONE IF TIME ALLOWS
 [X] 6. Just single quotes
-[] 7. Loading video...  Does not look great!
 
 CSS
 [X] 1. BEM
 [X] 2. to BEM avoid div > .aa
+[X] 3. Clean up CSS
 
 BIG CHANGES
 [] 1. Adapt for larger screens
 [] 2. Adapt for gigantic screens
 [] 3. Improve footer.  robotLogo??
-[] 4. Loupe in search has to be better
+[X] 4. Loupe in search has to be better
+[] 5 Audit from Chrome tools.... Check after it lives at Netlify
 
 DEPLOYMENT
 [] 1. POST TO GIT... PULL REQUEST?
@@ -25,6 +26,7 @@ DEPLOYMENT
 
 FIND OUT
 [] 1. What is manifest.json doing?
+[] 2. @media and min-with Xem
 
 SUPER IMPORTANT
 [] 1. Can't click on video when I'm on responsive mode on chrome dev tools.  Works on Firefox

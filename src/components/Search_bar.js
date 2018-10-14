@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
         <label htmlFor="search">
             <img
               className="search__loupe"
-              src="../images/search.png"
+              src="../images/search-loupe.png"
               alt="search icon"
             />
         </label>

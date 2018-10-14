@@ -9,7 +9,8 @@ Variables
     --blue: #54b3b3;
     --red: #ec5d60;
     --grey: #8a9499;
-    --white: #e1edee;;
+    --white: #e1edee;
+    --bright-white: #e9f2f3;
 }
 
 html {
@@ -27,27 +28,22 @@ body {
     background-color: var(--background-dark);
 }
 
-
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
-
 body,
 button,
 input,
 select,
 textarea {
-    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
     font-size: 18px;
     line-height: 1.5;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
     clear: both;
 }
 
@@ -55,95 +51,15 @@ p {
     margin-bottom: 1.5em;
 }
 
-b,
-strong {
-    font-weight: bold;
-}
-
-dfn,
-cite,
-em,
-i {
-    font-style: italic;
-}
-
-blockquote {
-    margin: 0 1.5em;
-}
-
-address {
-    margin: 0 0 1.5em;
-}
-
-pre {
-    display: inline-block;
-    font-family: "Courier 10 Pitch", Courier, monospace;
-    color: #ddca7e;
-    background: #282c34;
-    padding: .5em .8em;
-    border-radius: .2em;
-}
-
-code,
-kbd,
-tt,
-var {
-    font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-}
-
-abbr,
-acronym {
-    border-bottom: 1px dotted #666;
-    cursor: help;
-}
-
-mark,
-ins {
-    background: #fff9c0;
-    text-decoration: none;
-}
-
-sup,
-sub {
-    font-size: 75%;
-    height: 0;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sup {
-    bottom: 1ex;
-}
-
-sub {
-    top: .5ex;
-}
-
-small {
-    font-size: 75%;
-}
-
-big {
-    font-size: 125%;
-}
-
-figure {
-    margin: 0;
-}
-
-
 /*--------------------------------------------------------------
 General styling
 --------------------------------------------------------------*/
-
 img {
     display: block;
     border: 0;
     width: 100%;
     height: auto;
 }
-
 
 /*--------------------------------------------------------------
 Header:
@@ -171,27 +87,20 @@ h1 {
     margin: 0;
 }
 
-
-/*--------------------------------------------------------------
-Navigation:
---------------------------------------------------------------*/
-
 .header__mantra {
     padding: 0.5em;
     margin-top: 0em;
     font-size: 1.1em;
-    color: white;
+    color: var(--bright-white);
     background-color:var(--yellow);
     margin-right:1em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-
 /*--------------------------------------------------------------
 Search Bar:
 --------------------------------------------------------------*/
-
 .search {
     padding: 1em;
     display: flex;
@@ -208,21 +117,9 @@ Search Bar:
     flex: 1;
 }
 
-
 /*--------------------------------------------------------------
 Video Detail:
 --------------------------------------------------------------*/
-
-.video-detail h3 {
-    margin: 0;
-    color: var(--yellow);
-}
-
-.video-detail p {
-    color: var(--grey);
-    font-size: 0.8em;
-}
-
 .video-detail {
     padding: 0.5em;
     margin: 1em;
@@ -234,37 +131,45 @@ Video Detail:
 }
 
 .video-detail__loading {
+    padding-top: 1rem;
     text-align: center;
-    font-size: 3em;
+    font-size: 1.5rem;
     color: var(--red);
 }
 
-.intrinsic-container {
+.video-detail__title {
+    margin: 0;
+    color: var(--yellow);
+}
+
+.video-detail__description {
+    color: var(--grey);
+    font-size: 0.8em;
+}
+
+.video-detail--intrinsic-container {
     position: relative;
     height: 0;
     overflow: hidden;
 }
 
-
 /* 16x9 Aspect Ratio */
-.intrinsic-container-16x9 {
+.video-detail--intrinsic-container-16x9 {
     padding-bottom: 56.25%;
 }
 
-
 /* 4x3 Aspect Ratio */
-.intrinsic-container-4x3 {
+.video-detail--intrinsic-container-4x3 {
     padding-bottom: 75%;
 }
 
-.intrinsic-container iframe {
+.video-detail__video-player {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-
 
 /*--------------------------------------------------------------
 Cards:
@@ -299,19 +204,6 @@ ul {
 }
 
 /*--------------------------------------------------------------
-Sidebar:  NOT USED AT THE MOMENT
---------------------------------------------------------------*/
-.twin {
-    padding: 2em;
-    background: #2185C5;
-    color: white;
-}
-
-.twin:last-of-type {
-    background: #FF7F66;
-}
-
-/*--------------------------------------------------------------
 Footer:
 --------------------------------------------------------------*/
 .footer {
@@ -332,12 +224,6 @@ Basic responsive layout for all browsers:
 /*--------------------------------------------------------------
 CSS Grid layout for wider screens, when browser supports grid:
 --------------------------------------------------------------*/
-
-/* @media screen and (max-width: 300px) {
-    #root {
-        min-width: 300px;
-    }
-} */
 @supports (grid-area: auto) {
     #root {
         display: grid;
@@ -348,6 +234,16 @@ CSS Grid layout for wider screens, when browser supports grid:
             "detail" 
             "list"
             "footer";    
+    }
+
+    .search {
+        align-items: center;
+    }
+    .search__input {
+        padding-left: 0.5em;
+        border-radius: 5px 0 0 5px;
+        height: 2em;
+        border: none;
     }
 
     .cards {
@@ -367,13 +263,13 @@ CSS Grid layout for wider screens, when browser supports grid:
         }
 
         .header {
-            color: var(--white);
+            color: var(--bright-white);
             border-bottom: 1px solid var(--blue);
+            text-align: left;
         }
 
         .header__title {
             font-size: 2.5em;
-            text-align: left;
             padding: 0 0.5em;
         }
 
@@ -383,8 +279,6 @@ CSS Grid layout for wider screens, when browser supports grid:
 
         .header__mantra {
             background-color: var(--blue);
-            color: var(--white);
-            text-align: left;
             padding-left: 2em;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -397,19 +291,9 @@ CSS Grid layout for wider screens, when browser supports grid:
             padding: 1em;
             padding-right: 0;
         }
-        
-                .search__loupe {
-                    filter: invert(0.8);
-                }
 
         .search__input {
-            padding-left: 0.5em;
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 0px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
             height: 2.5em;
-            border: none;
         }
 
         .video-detail {
@@ -424,7 +308,7 @@ CSS Grid layout for wider screens, when browser supports grid:
             filter: saturate(0.4);
         }
 
-        h3 {
+        .video-detail__title {
             color: var(--purple);
         }
 
@@ -445,7 +329,7 @@ CSS Grid layout for wider screens, when browser supports grid:
     @media screen and (min-width: 47em) {        
         #root {
             background-color: var(--blue);
-            grid-template-columns: 1fr 1fr auto;
+            grid-template-columns: 1fr 1fr;
             grid-template-areas: 
                 "header  header  search"
                 "detail  detail  detail" 
@@ -489,10 +373,10 @@ CSS Grid layout for wider screens, when browser supports grid:
             background-color: var(--yellow);
             grid-template-columns: 1fr 2fr 2fr;
             grid-template-areas:
-            ".  header header" 
+            ".    header header" 
             "list search search"
-              "list    detail    detail"
-              "list  footer  footer";
+            "list detail detail"
+            "list footer footer";
         }
         body {
             background-color: var(--background-light);
@@ -542,7 +426,7 @@ CSS Grid layout for wider screens, when browser supports grid:
         }
         .footer {
             background-color: var(--blue);
-            color: var(--white);
+            color: var(--bright-white);
         }
     }
 }

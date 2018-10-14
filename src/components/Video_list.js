@@ -16,7 +16,7 @@ const VideoList = ({ videos, makeSelectedVideo, selectedVideo }) => {
       video={otherVideo}
     />
   ));
-  return <aside className="video-list"><ul>{list}</ul></aside>;
+  return <ul className="video-list">{list}</ul>;
 };
 
 export default VideoList;
