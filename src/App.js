@@ -21,6 +21,7 @@ class App extends Component {
   };
 
   componentDidMount() {
+    console.log(process.env);
     // YTSearch only requires a key, a term to search and a callback function.
     // It might also take a promise instead of the callback
     YTSearch(
@@ -70,7 +71,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header title={'UTB'} mantra={'Video... Devolved'} />
+        <Header title={'U2B'} mantra={'Video... Devolved'} />
         <SearchBar searchVideo={this.searchVideo} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
