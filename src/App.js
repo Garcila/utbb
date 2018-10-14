@@ -11,7 +11,8 @@ import VideoDetail from './components/Video_detail';
 import VideoList from './components/Video_list';
 import Footer from './components/Footer';
 
-import KEY from './apiKeys.js';
+// import KEY from '../apiKeys.js';
+const API_KEY = "AIzaSyAchYhOcuXc6ZWEZ02s3QqEBI3S6VzkYvg";
 
 class App extends Component {
   state = {
@@ -24,7 +25,8 @@ class App extends Component {
     // It might also take a promise instead of the callback
     YTSearch(
       {
-        key: KEY.API_key,
+        // key: KEY.API_key,
+        key: API_KEY,
         term: 'CSS Grid'
       },
       videos => {
@@ -43,7 +45,8 @@ class App extends Component {
   searchVideo = word => {
     YTSearch(
       {
-        key: KEY.API_key,
+        // key: KEY.API_key,
+        key: API_KEY,
         term: word
       },
       debounce(
