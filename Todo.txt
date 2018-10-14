@@ -6,10 +6,11 @@ Javascript
 [X] 4. Is the HTML semantic
 [X] 5. Syntax FM accessibility....MORE CAN BE DONE IF TIME ALLOWS
 [X] 6. Just single quotes
+[] 7. Loading video...  Does not look great!
 
 CSS
-[] 1. BEM
-[] 2. 
+[X] 1. BEM
+[X] 2. to BEM avoid div > .aa
 
 BIG CHANGES
 [] 1. Adapt for larger screens
@@ -24,4 +25,7 @@ DEPLOYMENT
 
 FIND OUT
 [] 1. What is manifest.json doing?
+
+SUPER IMPORTANT
+[] 1. Can't click on video when I'm on responsive mode on chrome dev tools.  Works on Firefox
 

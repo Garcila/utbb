@@ -8,7 +8,7 @@ const VideoDetail = ({ video }) => {
         <main className="video-detail">
           <div className="iframe-container intrinsic-container intrinsic-container-16x9" tabIndex="0">
             <iframe
-              className="video-player"
+              className="video-detail__video-player"
               title={`${URL}${video.id.videoId}`}
               src={`${URL}${video.id.videoId}`}
               allowFullScreen
@@ -19,7 +19,7 @@ const VideoDetail = ({ video }) => {
           <p>{video.snippet.description}</p>
         </main>
       ) : (
-        <div className="loading">Loading Video...</div>
+        <div className="video-detail__loading">Loading Video...</div>
       )}
     </>
   );

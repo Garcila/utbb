@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
       <section className="search">
         <label htmlFor="search">
             <img
-              className="loupe"
+              className="search__loupe"
               src="../images/search.png"
               alt="search icon"
             />
@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
           type="text"
           value={this.state.word}
           onChange={e => this.handleInput(e.target.value)}
-          className="input_search"
+          className="search__input"
           placeholder="What do you wanna see"
         />
       </section>
