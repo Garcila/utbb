@@ -18,7 +18,6 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log(process.env.REACT_APP_API_KEY);
     // YTSearch only requires a key, a term to search and a callback function.
     // It might also take a promise instead of the callback
     YTSearch(
