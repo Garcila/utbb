@@ -11,9 +11,6 @@ import VideoDetail from './components/Video_detail';
 import VideoList from './components/Video_list';
 import Footer from './components/Footer';
 
-// import KEY from '../apiKeys.js';
-const API_KEY = "AIzaSyAchYhOcuXc6ZWEZ02s3QqEBI3S6VzkYvg";
-
 class App extends Component {
   state = {
     videos: [],
@@ -21,13 +18,12 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log(process.env);
+    console.log(process.env.REACT_APP_API_KEY);
     // YTSearch only requires a key, a term to search and a callback function.
     // It might also take a promise instead of the callback
     YTSearch(
       {
-        // key: KEY.API_key,
-        key: API_KEY,
+        key: process.env.REACT_APP_API_KEY,
         term: 'CSS Grid'
       },
       videos => {
@@ -46,8 +42,7 @@ class App extends Component {
   searchVideo = word => {
     YTSearch(
       {
-        // key: KEY.API_key,
-        key: API_KEY,
+        key: process.env.REACT_APP_API_KEY,
         term: word
       },
       debounce(
