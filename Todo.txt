@@ -11,22 +11,22 @@ CSS
 [X] 1. BEM
 [X] 2. to BEM avoid div > .aa
 [X] 3. Clean up CSS
+[X] 4. Three face Icon on Browser..more contrast
 
 BIG CHANGES
 [] 1. Adapt for larger screens
 [] 2. Adapt for gigantic screens
-[] 3. Improve footer.  robotLogo??
+[X] 3. Improve footer.  robotLogo??
 [X] 4. Loupe in search has to be better
-[] 5 Audit from Chrome tools.... Check after it lives at Netlify
+[X] 5 Audit from Chrome tools.... Check after it lives at Netlify
 
 DEPLOYMENT
-[] 1. POST TO GIT... PULL REQUEST?
-[] 2. Update Netlify
-[] 3. Make sure it loads from garcila@github.io
+[X] 1. POST TO GIT
+[X] 2. Netlify
+[X] 3. Make sure it loads from garcila@github.io
 
 FIND OUT
-[] 1. What is manifest.json doing?
-[] 2. @media and min-with Xem
+[X] 1. What is manifest.json doing?
 
 SUPER IMPORTANT
 [] 1. Can't click on video when I'm on responsive mode on chrome dev tools.  Works on Firefox

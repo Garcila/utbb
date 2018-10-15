@@ -213,6 +213,10 @@ Footer:
     text-align: center;
 }
 
+.footer--small {
+    font-size: 0.7em;
+}
+
 /*--------------------------------------------------------------
 Basic responsive layout for all browsers:
 --------------------------------------------------------------*/
