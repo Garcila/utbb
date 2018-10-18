@@ -6,6 +6,7 @@ Javascript
 [X] 4. Is the HTML semantic
 [X] 5. Syntax FM accessibility....MORE CAN BE DONE IF TIME ALLOWS
 [X] 6. Just single quotes
+[] 7. Jump to video detail when a link on the sidebar is clicked
 
 CSS
 [X] 1. BEM
@@ -27,7 +28,3 @@ DEPLOYMENT
 
 FIND OUT
 [X] 1. What is manifest.json doing?
-
-SUPER IMPORTANT
-[] 1. Can't click on video when I'm on responsive mode on chrome dev tools.  Works on Firefox
-
